@@ -1,0 +1,15 @@
+services:
+  chromecast-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: chromecast-api
+    network_mode: host
+    ports:
+      - "8011:8011"
+    restart: unless-stopped
+    command:
+      - --http-addr
+      - 0.0.0.0
+      - --http-port
+      - "8011"
