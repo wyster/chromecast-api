@@ -6,7 +6,6 @@ on:
 jobs:
   publish_latest:
     name: Publish latest image
-    needs: build
     if: gitea.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     timeout-minutes: 10
